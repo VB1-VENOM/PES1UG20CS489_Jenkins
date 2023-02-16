@@ -28,11 +28,11 @@ pipeline {
     
     post {
         always {
-            echo 'Pipeline finished'
+            sh 'echo "Pipeline finished"'
         }
         
         failure {
-            echo 'Pipeline failed'
+            sh 'echo "Pipeline failed"'
         }
     }
 }
