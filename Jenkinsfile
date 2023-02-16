@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Building..."'
-                file_name="check.cpp"
-                sh 'g++ $file_name' 
+                sh 'g++ "main/hello.cpp"' 
                 
             }
         }
