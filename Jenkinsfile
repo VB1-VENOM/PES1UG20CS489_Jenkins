@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'echo "Building..."'
                 file_name="check.cpp"
-                g++ $file_name -o $output_file
+                sh 'g++ $file_name' 
                 
             }
         }
@@ -14,6 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "Testing..."'
+                sh './a.out'
                 
             }
         }
